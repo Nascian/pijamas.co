@@ -18,32 +18,32 @@ import java.util.List;
 @RestController
 public class FeedController {
 
-    @Autowired
-    FeedRepository feedRepository;
+//    @Autowired
+//    FeedRepository feedRepository;
 
-    @RequestMapping("/findAll")
-    public Iterable<Feed> findAll(@RequestParam("page") int page) {
-        return feedRepository.findAll(new PageRequest(page,6));
-    }
+//    @RequestMapping("/findAll")
+//    public Iterable<Feed> findAll(@RequestParam("page") int page) {
+//        return feedRepository.findAll(new PageRequest(page,6));
+//    }
 
-    @RequestMapping("/seach")
-    public Iterable<Feed> seach(@RequestParam("page") int page,@RequestParam("term") String term) {
-        return feedRepository.findByDescription(term,new PageRequest(page,6));
-    }
+//    @RequestMapping("/seach")
+//    public Iterable<Feed> seach(@RequestParam("page") int page,@RequestParam("term") String term) {
+//        return feedRepository.findByDescription(term,new PageRequest(page,6));
+//    }
 
-    @RequestMapping("/save")
-    public Feed save() {
-        Feed h = new Feed();
-        h.setDescription("hola mundo");
-        h.setUserAvatarUrl("hola mundo");
-        h.setUserName("hola mundo");
-        Image i = new Image("url");
-        List<Image> list = new ArrayList<Image>();
-        list.add(i);
-        h.setImages(list);
-
-        return feedRepository.save(h);
-    }
+//    @RequestMapping("/save")
+//    public Feed save() {
+//        Feed h = new Feed();
+//        h.setDescription("hola mundo");
+//        h.setUserAvatarUrl("hola mundo");
+//        h.setUserName("hola mundo");
+//        Image i = new Image("url");
+//        List<Image> list = new ArrayList<Image>();
+//        list.add(i);
+//        h.setImages(list);
+//
+//        return feedRepository.save(h);
+//    }
 
 
 }
